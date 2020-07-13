@@ -1,7 +1,7 @@
 const { useCallback } = require("react")
 
 exports.handler = function(event, context, callback){
-    const sevcretContent = `
+    const secretContent = `
     <h3>Welcome to the secret area</h3>
     <p>Here the sky is <strong>blue</strong>, and the grass is green</p>
     
@@ -19,7 +19,7 @@ exports.handler = function(event, context, callback){
     if (body.password == "javascript"){
         callback(null, {
             statusCode: 200,
-            body: sevcretContent
+            body: secretContent
         })
     }else{
         callback(null, {
